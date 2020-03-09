@@ -20,6 +20,10 @@ from apps.users import views as user_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-     path('', dash_views.HomeView.as_view()),
-     path('login/', user_views.LoginAPIView.as_view(), name='login_url'),
+    path('', dash_views.HomeView.as_view(), name='home'),
+    path('new/',dash_views.NewView.as_view(), name='new'),
+    path('privacy/',dash_views.PrivacyView.as_view(), name='privacy'),
+    path('cookie/',dash_views.CookieView.as_view(), name='cookie'),
+    path('minor/',dash_views.MinorView.as_view(), name='minor'),
+    path('login/', user_views.LoginAPIView.as_view(), name='login_url'),
 ]
