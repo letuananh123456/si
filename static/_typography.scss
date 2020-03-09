@@ -1,0 +1,153 @@
+/** ----------------------------------------------------------
+ * Typography
+ * -----------------------------------------------------------*/
+// Typography variables
+// For typography variables prpened with $typ_ and use undescores to separate words.
+$typ_family_heading: "raleway",
+Arial,
+Sans Serif;
+$typ_family_body: "raleway",
+Arial,
+Sans Serif;
+
+// Overwrite the default bootstrap styles
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+    margin: 0 0 15px 0;
+    font-family: $typ_family_heading;
+    font-weight: normal;
+}
+
+h1,
+.h1,
+h2,
+.h2 {
+    font-size: 30px;
+    line-height: 36px;
+
+    @media (min-width: $screen-sm-min) {
+        font-size: 45px;
+        line-height: 58px;
+    }
+}
+
+h3,
+.h3,
+h4,
+.h4 {
+    font-weight: bold;
+}
+
+h3,
+.h3 {
+    font-size: 25px;
+    line-height: 25px;
+
+    @media (min-width: $screen-sm-min) {
+        font-size: 35px;
+        line-height: 35px;
+    }
+}
+
+h4,
+.h4 {
+    font-size: 20px;
+    line-height: 20px;
+
+    @media (min-width: $screen-sm-min) {
+        font-size: 25px;
+        line-height: 25px;
+    }
+}
+
+body,
+p,
+.p {
+    font: 16px/26px $typ_family_body;
+
+    @media (min-width: $screen-sm-min) {
+        font: 16px/24px $typ_family_body;
+    }
+}
+
+.small p {
+    font-size: 85%;
+    line-height: 24px;
+}
+
+.pclose {
+    font: 18px/20px $typ_family_body;
+}
+
+.lead {
+    font: 20px/30px $typ_family_body;
+
+    @media (min-width: $screen-md-min) {
+        font: 26px/36px $typ_family_body;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        font: 30px/45px $typ_family_body;
+    }
+}
+
+b,
+strong,
+.bold {
+    font-weight: bold;
+}
+
+blockquote {
+    border-color: map-get($colours_arr, light-blue);
+}
+
+// list styling
+.list-checked {
+
+    li {
+        margin: 0 0 20px 30px;
+        position: relative;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        &:before {
+            content: '\f26b';
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            display: inline-block;
+            font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            position: absolute;
+            top: 0;
+            left: -30px;
+            line-height: 30px;
+            }
+            }
+            }
+
+            // links
+            a {
+                transition: opacity 0.25s ease-in-out;
+                position: relative;
+                z-index: 1;
+
+                &:hover,
+                &:active,
+                &:focus {
+                    text-decoration: none;
+                    color: inherit;
+                    opacity: 0.6;
+                }
+            }
